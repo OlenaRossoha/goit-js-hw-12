@@ -2,12 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Image Search</title>
+    <base href="/goit-js-hw-12/" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+    />
     <script type="module" crossorigin src="/https:/goit-js-hw-12/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/https:/goit-js-hw-12/assets/index-D8Btx21I.css">
+    <link rel="modulepreload" crossorigin href="/https:/goit-js-hw-12/assets/vendor-CvMZEKsE.js">
+    <link rel="stylesheet" crossorigin href="/https:/goit-js-hw-12/assets/vendor-DnveWo0P.css">
+    <link rel="stylesheet" crossorigin href="/https:/goit-js-hw-12/assets/index-T5HlspLI.css">
   </head>
   <body>
+    <div class="search-container">
+      <form class="form" id="search-form">
+        <label>
+          <input type="text" name="query" placeholder="Search images..." />
+        </label>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <span class="loader is-hidden"></span>
+    <ul id="gallery" class="gallery"></ul>
+    <button id="load-more" class="load-more">Load more</button>
+    <div id="loader"></div>
   </body>
 </html>
