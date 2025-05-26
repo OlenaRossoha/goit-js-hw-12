@@ -1,2 +1,142 @@
 @import url('./reset.css');
 @import url('./base.css');
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.form input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+}
+
+.form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  list-style: none;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-info {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.gallery-info p {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.gallery-info b {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+.gallery-info span {
+  color: #555;
+  font-size: 13px;
+}
+
+.load-more {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*#loader {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+    display: none;
+  }*/
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top-color: #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  background: url('./images/loader.gif') no-repeat center;
+  background-size: contain;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
