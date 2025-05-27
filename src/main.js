@@ -19,6 +19,7 @@ let totalHits = 0;
 
 const form = document.getElementById('search-form');
 const loadMoreBtn = document.getElementById('load-more');
+hideLoadMoreButton(); // СХОВАТИ при старті
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
@@ -77,3 +78,4 @@ loadMoreBtn.addEventListener('click', async () => {
     hideLoader();
   }
 });
+hideLoadMoreButton();
